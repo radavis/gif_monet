@@ -1,0 +1,14 @@
+div.container {
+  height: 100vh;
+}
+
+div.container img {
+  /* center horizontally */
+  display: block;
+  margin: auto;
+
+  /* center vertically within div */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
