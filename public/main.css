@@ -1,8 +1,8 @@
-div.container {
+div.center-container {
   height: 100vh;
 }
 
-div.container img {
+div.center-container img {
   /* center horizontally */
   display: block;
   margin: auto;

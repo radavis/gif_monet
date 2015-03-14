@@ -25,3 +25,16 @@ Launch it.
 ```
 ruby server.rb
 ```
+
+## Troubleshooting
+
+### NoMethodError: undefined method 'join' for String
+
+Using the master branch of sinatra on github fixed this:
+
+  ```ruby
+# Gemfile
+gem "sinatra", git: "git@github.com:sinatra/sinatra.git"
+```
+
+Related [GitHub Issue](https://github.com/sinatra/sinatra/issues/951)

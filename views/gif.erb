@@ -1,0 +1,23 @@
+<form class="new-gif-form" action="/gifs" method="post" enctype="multipart/form-data">
+  <fieldset>
+    <div class="form-group">
+      <label for="gif_file">Gif</label>
+      <input type="file" id="gif_file" name="gif">
+    </div>
+
+    <div class="form-group">
+      <label for="gif_type">Type</label>
+      <select name="gif_type">
+        <% Gif::TYPES.each do |type| %>
+          <option value="<%= type %>">
+            <%= type %>
+          </option>
+        <% end %>
+      <select>
+    </div>
+
+    <div class="form-controls">
+      <input type="submit" value="Upload">
+    </div>
+  </fieldset>
+</form>
