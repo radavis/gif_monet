@@ -12,3 +12,8 @@ div.center-container img {
   top: 50%;
   transform: translateY(-50%);
 }
+
+div.flash {
+  background-color: green;
+  text-align: center;
+}

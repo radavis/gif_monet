@@ -1,23 +1,13 @@
-<form class="new-gif-form" action="/gifs" method="post" enctype="multipart/form-data">
-  <fieldset>
-    <div class="form-group">
-      <label for="gif_file">Gif</label>
-      <input type="file" id="gif_file" name="gif">
-    </div>
+<form action="/gifs" method="post" enctype="multipart/form-data">
+  <select name="gif_type">
+    <% Gif::TYPES.each do |type| %>
+      <option value="<%= type %>">
+        <%= type %> image
+      </option>
+    <% end %>
+  <select>
 
-    <div class="form-group">
-      <label for="gif_type">Type</label>
-      <select name="gif_type">
-        <% Gif::TYPES.each do |type| %>
-          <option value="<%= type %>">
-            <%= type %>
-          </option>
-        <% end %>
-      <select>
-    </div>
+  <input type="file" id="gif_file" name="gif" required>
 
-    <div class="form-controls">
-      <input type="submit" value="Upload">
-    </div>
-  </fieldset>
+  <button type="submit">Upload</button>
 </form>
