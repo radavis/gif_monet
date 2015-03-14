@@ -22,6 +22,7 @@ div.flash {
   background-color: DarkGreen;
   text-align: center;
   padding: 10px;
+  border: 0, 0, 5px, 0;
 }
 
 a:link, a:visited {

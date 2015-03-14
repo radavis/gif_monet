@@ -38,3 +38,7 @@ gem "sinatra", git: "git@github.com:sinatra/sinatra.git"
 ```
 
 Related [GitHub Issue](https://github.com/sinatra/sinatra/issues/951)
+
+## File Upload
+
+Works for local development. Integrate ActiveRecord and Fog to allow for file uploads in production.
