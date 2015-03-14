@@ -8,7 +8,7 @@ use Rack::Flash
 def random_image(type)
   images = Dir["./public/images/#{type}/*"]
   if images.any?
-    return images.sample.gsub("./public/", "")
+    return images.sample.gsub("./public", "")
   else
     return ""
   end
@@ -23,6 +23,8 @@ end
 
 get "/gifs/new" do
   @refresh = false
+  @background_image = random_image("background")
+  @foreground_image = random_image("foreground")
   erb :gif
 end
 
