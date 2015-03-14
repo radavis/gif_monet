@@ -1,8 +1,12 @@
-div.container {
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+div.center-container {
   height: 100vh;
 }
 
-div.container img {
+div.center-container img {
   /* center horizontally */
   display: block;
   margin: auto;
@@ -11,4 +15,21 @@ div.container img {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+div.flash {
+  color: white;
+  background-color: DarkGreen;
+  text-align: center;
+  padding: 10px;
+  border: 0, 0, 5px, 0;
+}
+
+a:link, a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
 }

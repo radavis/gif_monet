@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="refresh" content="6; URL=/">
-  <title>gifmonet</title>
-  <link rel="stylesheet" type="text/css" href="main.css">
+  <% if @refresh %>
+    <meta http-equiv="refresh" content="6; URL=/">
+  <% end %>
+  <title>Seizure Roulette</title>
+  <link rel="stylesheet" type="text/css" href="/main.css">
   <style>
     body {
       background-image: url("<%= @background_image %>");
@@ -13,7 +15,11 @@
 </head>
 
 <body>
-  <div class="container">
+  <%= erb :flash %>
+
+  <%= yield %>
+
+  <div class="center-container">
     <img src="<%= @foreground_image %>">
   </div>
 </body>
