@@ -1,0 +1,13 @@
+<form action="/gifs" method="post" enctype="multipart/form-data">
+  <select name="gif_type">
+    <% Gif::TYPES.each do |type| %>
+      <option value="<%= type %>">
+        <%= type %> image
+      </option>
+    <% end %>
+  <select>
+
+  <input type="file" id="gif_file" name="gif" required>
+
+  <button type="submit">Upload</button>
+</form>
